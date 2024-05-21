@@ -2,7 +2,7 @@
   "name": "react-sample",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bubbleShaker.github.io/react-sample",
+  "homepage": "https://bubbleShaker.github.io/bubble-shaker.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

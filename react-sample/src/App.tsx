@@ -10,11 +10,6 @@ const getRandomPosition = () => ({
   top: Math.random() * window.innerHeight,
   left: Math.random() * window.innerWidth,
 });
-// 初期位置を生成する関数
-const getDefaultPosition = () => ({
-  top: window.innerHeight/2,
-  left: window.innerWidth/2,
-});
 // ブロックコンポーネント
 const Block = ({ style }: { style: React.CSSProperties }) => {
   return <div className="block" style={style} />;
@@ -32,8 +27,8 @@ const App: React.FC = () => {
   const [blocks, setBlocks] = useState<Position[]>([]);
   useEffect(() => {
     const initialBlocks = [];
-    for (let i = 0; i < 30; i++) {
-      initialBlocks.push(getDefaultPosition());
+    for (let i = 0; i < 20; i++) {
+      initialBlocks.push(getRandomPosition());
     }
     // 初期位置をblocks状態に設定
     setBlocks(initialBlocks);
@@ -50,7 +45,7 @@ const App: React.FC = () => {
           return anime.random(1, 3);
         },
         duration: 2500,
-        delay: isFirstRun ? 0 : anime.stagger(30), // 初回実行時のみ遅延なし
+        delay: isFirstRun ? 0 : anime.stagger(50), // 初回実行時のみ遅延なし
         complete: () => {
           isFirstRun = false; // 初回実行が完了したことを設定
           animateBlocks(); // アニメーションを再度実行

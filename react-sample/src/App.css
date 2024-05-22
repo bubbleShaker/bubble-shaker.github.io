@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  position: relative;
+  overflow: hidden;
+} 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,15 +22,41 @@
   }
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap");
+
+.container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(149, 216, 118);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
 .App-header {
   background-color: #282c34;
   padding: 20px;
   color: white;
+  z-index: 10;
+  width: 100%; /* この行を追加 */
+  position: fixed; /* この行を追加 */
+  top: 0; /* この行を追加 */
+  left: 0; /* この行を追加 */
 }
 
 .App-about {
   margin: 20px;
   text-align: left;
+  z-index: 10;
 }
 
 .App-footer {
@@ -31,6 +66,8 @@
   position: fixed;
   width: 100%;
   bottom: 0;
+  z-index: 10;
+  left: 0; /* この行を追加 */
 }
 
 .App-link {

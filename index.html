@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <h2>Now Loading...</h2>
+  </div>
+
+  <div class="content">
+    <header class="header">
+      <h1>Hello! I'm Soh.</h1>
+    </header>
+  
+    <main>
+      <sectin class="about">
+        <h2>自己紹介</h2>
+        <p>そうです。群馬大学4年です。</p>
+        <h3>趣味</h3>
+        <p>競技プログラミングが趣味です。AtCoderはアルゴリズム緑、ヒューリスティック緑です。最近はルービックキューブにハマりそうでしたが、ハマりすぎて生活が崩壊しそうだったので引退しました。
+          <br>最近はWebの勉強を頑張りたいと思っています。このサイトはHTML/CSS/JavaScriptのみで作成しました。
+        </p>
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="https://x.com/bubble_shaker" target="_blank">X(Twitter)</a></li>
+          <li><a href="https://atcoder.jp/users/Coji" target="_blank">AtCoder</a></li>
+        </ul>
+      </sectin>
+    </main>
+  
+    <footer class="footer">
+      <p>© 2024 そう</p>
+    </footer>
+    
+  </div>
+
+  <div class="container">
+    <script src="anime.min.js"></script>
+    <script>
+      const container = document.querySelector(".container");
+      for(let i=0;i<20;i++){
+        const blocks=document.createElement("div");
+        blocks.classList.add("block");
+        container.appendChild(blocks);
+      }
+      function animateBlocks() {
+        anime({
+          targets: ".block",
+          translateX: function() {
+            return anime.random(-600,400);
+          },
+          translateY: function() {
+            return anime.random(-600,400);
+          },
+          scale: function() {
+            return anime.random(1,1.5);
+          },
+          duration: 1500,
+          delay: anime.stagger(100),
+          complete: animateBlocks,
+        });
+      }
+    </script>
+  </div>
+
+  <script>
+    window.onload=function() {
+      setTimeout(() => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loaded");
+        const content = document.querySelector(".content");
+        const container = document.querySelector(".container");
+        content.style.visibility="visible";
+        container.style.visibility="visible";
+        animateBlocks();
+      },1300)
+    }
+  </script>
+
+</body>
+</html>

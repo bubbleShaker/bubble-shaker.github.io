@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Playfair Display", serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -70,16 +70,11 @@ main {
 .loader h2 {
   color: white;
   font-size: 2.3rem;
-  font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
 .content h1,h2,h3,p,li {
   color: white;
-}
-
-.content p,li {
-  font-family: "Kosugi", sans-serif;
 }
 
 .content h1,p,ul {

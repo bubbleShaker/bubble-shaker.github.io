@@ -78,11 +78,11 @@ main {
   color: white;
 }
 
-.content h2,h3,p,li {
+.content p,li {
   font-family: "Kosugi", sans-serif;
 }
 
-.content p,ul {
+.content h1,p,ul {
   padding: 2rem;
 }
 

@@ -31,6 +31,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 li {
@@ -116,24 +117,24 @@ a {
 
 .content {
   width: 100%;
+  max-width: 1200px;
   position: absolute;
   font-size: 1.2rem;
   visibility: hidden;
   transition: all 0.3s;
   transition-delay: 0.3s;
   z-index: 2;
-}
-
-.content {
   color: white;
 }
 
-.content p,ul {
-  padding: 10px 40px 40px 40px;
+.content p {
+  margin: 10px 40px 40px 40px;
+  word-break: break-word; /* 長い単語を折り返す */
 }
 
 .content .title {
-  padding: 0 40px;
+  margin: 0 40px;
+  word-break: break-word; /* 長い単語を折り返す */
 }
 
 .content .about .box {
@@ -158,7 +159,7 @@ a {
 }
 
 .content .about .box .card img {
-  width: 100px;
+  width: 60px;
   transition: all 0.3s;
   padding-bottom: 10px;
 }

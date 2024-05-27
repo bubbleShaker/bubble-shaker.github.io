@@ -156,14 +156,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  cursor:pointer;
 }
 
 .content .about .box .card img {
   width: 60px;
   transition: all 0.3s;
   padding-bottom: 10px;
-  -webkit-tap-highlight-color: transparent;
-  cursor:pointer;
 }
 
 .content .about .box .card p {

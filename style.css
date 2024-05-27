@@ -162,6 +162,8 @@ a {
   width: 60px;
   transition: all 0.3s;
   padding-bottom: 10px;
+  -webkit-tap-highlight-color: transparent;
+  cursor:pointer;
 }
 
 .content .about .box .card p {
